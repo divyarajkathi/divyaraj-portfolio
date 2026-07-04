@@ -10,6 +10,7 @@ import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import TechStackNew from "./TechStackNew";
 import setSplitText from "./utils/splitText";
+import { setAllTimeline } from "./utils/GsapScroll";
 
 const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
@@ -24,6 +25,12 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     };
     resizeHandler();
     window.addEventListener("resize", resizeHandler);
+
+    // Initialize career section timeline on mobile/tablet viewports since character model is unmounted
+    if (window.innerWidth <= 1024) {
+      setAllTimeline();
+    }
+
     return () => {
       window.removeEventListener("resize", resizeHandler);
     };
