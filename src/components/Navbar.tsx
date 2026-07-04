@@ -5,10 +5,14 @@ import { gsap } from "gsap";
 import Lenis from "lenis";
 import "./styles/Navbar.css";
 
+import { useLoading } from "../context/LoadingProvider";
+
 gsap.registerPlugin(ScrollTrigger);
 export let lenis: Lenis | null = null;
 
 const Navbar = () => {
+  const { isLoading } = useLoading();
+
   useEffect(() => {
     // Initialize Lenis smooth scroll
     lenis = new Lenis({
@@ -22,8 +26,12 @@ const Navbar = () => {
       infinite: false,
     });
 
-    // Start paused
-    lenis.stop();
+    // Start paused only if the loading screen is active, otherwise start immediately
+    if (isLoading) {
+      lenis.stop();
+    } else {
+      lenis.start();
+    }
 
     // Handle smooth scroll animation frame
     function raf(time: number) {
