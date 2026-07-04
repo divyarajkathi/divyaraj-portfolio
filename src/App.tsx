@@ -8,6 +8,7 @@ const CharacterModel = lazy(() => import("./components/Character"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
 const MyWorks = lazy(() => import("./pages/MyWorks"));
 import { LoadingProvider } from "./context/LoadingProvider";
+import ChatBot from "./components/ChatBot";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           }
         />
       </Routes>
+      <ChatBot />
       <Analytics />
       <SpeedInsights />
     </BrowserRouter>
