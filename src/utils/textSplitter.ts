@@ -49,7 +49,7 @@ export class TextSplitter {
   private splitChars(element: Element) {
     const text = element.textContent || "";
     const chars = text.split("");
-    
+
     element.innerHTML = chars
       .map((char) => {
         if (char === " ") {

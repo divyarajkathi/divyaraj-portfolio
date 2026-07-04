@@ -2,91 +2,56 @@ import { useEffect, useState } from "react";
 import "./styles/Loading.css";
 import { useLoading } from "../context/LoadingProvider";
 
-import Marquee from "react-fast-marquee";
-
 const Loading = ({ percent }: { percent: number }) => {
   const { setIsLoading } = useLoading();
-  const [loaded, setLoaded] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [clicked, setClicked] = useState(false);
 
-  if (percent >= 100) {
+  // Trigger loading screen split immediately when progress reaches 100%
+  if (percent >= 100 && !isLoaded) {
     setTimeout(() => {
-      setLoaded(true);
-      setTimeout(() => {
-        setIsLoaded(true);
-      }, 1000);
-    }, 600);
+      setIsLoaded(true);
+    }, 100);
   }
 
   useEffect(() => {
-    import("./utils/initialFX").then((module) => {
-      if (isLoaded) {
-        setClicked(true);
-        setTimeout(() => {
+    if (isLoaded) {
+      // Unmount the loader and trigger landing page text animations after the zoom-out transition finishes (300ms)
+      setTimeout(() => {
+        import("./utils/initialFX").then((module) => {
           if (module.initialFX) {
             module.initialFX();
           }
           setIsLoading(false);
-        }, 900);
-      }
-    });
+        });
+      }, 300);
+    }
   }, [isLoaded]);
 
-  function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
-    const { currentTarget: target } = e;
-    const rect = target.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    target.style.setProperty("--mouse-x", `${x}px`);
-    target.style.setProperty("--mouse-y", `${y}px`);
-  }
-
   return (
-    <>
-      <div className="loading-header">
-        <a href="/#" className="loader-title" data-cursor="disable">
-          RedoyanulHaque
-        </a>
-        <div className={`loaderGame ${clicked && "loader-out"}`}>
-          <div className="loaderGame-container">
-            <div className="loaderGame-in">
-              {[...Array(27)].map((_, index) => (
-                <div className="loaderGame-line" key={index}></div>
-              ))}
-            </div>
-            <div className="loaderGame-ball"></div>
+    <div className={`loading-screen ${isLoaded && "loaded"}`}>
+      <div className="loader-content-center">
+        {/* The Text group that scales up on load completion */}
+        <div className={`loader-text-group ${isLoaded && "zoom-out"}`}>
+          {/* Background Text Layer (Dark Grey) */}
+          <div className="loader-text-bg">
+            WELCOME
+          </div>
+
+          {/* Foreground Text Layer (Solid White) that gets clipped as progress rises */}
+          <div
+            className="loader-text-fg"
+            style={{ clipPath: `inset(${100 - percent}% 0px 0px 0px)` }}
+          >
+            WELCOME
+          </div>
+
+          {/* Tiny Status indicator on the bottom right of the text */}
+          <div className="loader-percentage-small">
+            loading... {percent}%
           </div>
         </div>
       </div>
-      <div className="loading-screen">
-        <div className="loading-marquee">
-          <Marquee>
-            <span>&nbsp; AI Engineer &nbsp;</span> <span>&nbsp; Full Stack Developer &nbsp;</span>
-            <span>&nbsp; AI Engineer &nbsp;</span> <span>&nbsp; Full Stack Developer &nbsp;</span>
-          </Marquee>
-        </div>
-        <div
-          className={`loading-wrap ${clicked && "loading-clicked"}`}
-          onMouseMove={(e) => handleMouseMove(e)}
-        >
-          <div className="loading-hover"></div>
-          <div className={`loading-button ${loaded && "loading-complete"}`}>
-            <div className="loading-container">
-              <div className="loading-content">
-                <div className="loading-content-in">
-                  Loading <span>{percent}%</span>
-                </div>
-              </div>
-              <div className="loading-box"></div>
-            </div>
-            <div className="loading-content2">
-              <span>Welcome</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    </div>
   );
 };
 
@@ -95,22 +60,24 @@ export default Loading;
 export const setProgress = (setLoading: (value: number) => void) => {
   let percent: number = 0;
 
+  // Hyper-speed loading progress ticks (fully loads within ~800ms to 1s)
   let interval = setInterval(() => {
     if (percent <= 50) {
-      let rand = Math.round(Math.random() * 5);
+      let rand = Math.round(Math.random() * 8) + 5; // Fast steps (5% - 13% increments)
       percent = percent + rand;
+      if (percent > 50) percent = 50;
       setLoading(percent);
     } else {
       clearInterval(interval);
       interval = setInterval(() => {
-        percent = percent + Math.round(Math.random());
+        percent = percent + Math.round(Math.random() * 3) + 1; // Speedy increments up to 91%
         setLoading(percent);
         if (percent > 91) {
           clearInterval(interval);
         }
-      }, 2000);
+      }, 45); // Ticks every 45ms for instant responsiveness
     }
-  }, 100);
+  }, 35);
 
   function clear() {
     clearInterval(interval);

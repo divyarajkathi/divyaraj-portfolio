@@ -41,7 +41,18 @@ const Scene = () => {
       const camera = new THREE.PerspectiveCamera(14.5, aspect, 0.1, 1000);
       camera.position.z = 10;
       camera.position.set(0, 13.1, 24.7);
-      camera.zoom = 1.1;
+
+      // Calculate responsive zoom based on screen aspect ratio
+      const baseZoom = 1.1;
+      if (aspect < 1) {
+        // Mobile / Portrait viewports: scale down zoom based on aspect ratio to prevent cropping
+        camera.zoom = Math.max(0.5, baseZoom * aspect * 1.45);
+      } else if (aspect < 1.4) {
+        // Tablets / Square aspect ratios
+        camera.zoom = Math.max(0.8, baseZoom * aspect * 0.8);
+      } else {
+        camera.zoom = baseZoom;
+      }
       camera.updateProjectionMatrix();
 
       let headBone: THREE.Object3D | null = null;
@@ -68,7 +79,7 @@ const Scene = () => {
             setTimeout(() => {
               light.turnOnLights();
               animations.startIntro();
-            }, 2500);
+            }, 400);
           });
           window.addEventListener("resize", () =>
             handleResize(renderer, camera, canvasDiv, character)

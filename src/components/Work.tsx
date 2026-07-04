@@ -10,88 +10,66 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Work = () => {
   useEffect(() => {
-    // Disable pinning on mobile to allow scrolling
-    if (window.innerWidth <= 768) return;
-
-    let translateX: number = 0;
-
-    function setTranslateX() {
-      const box = document.getElementsByClassName("work-box");
-      if (box.length === 0) return;
-      const rectLeft = document
-        .querySelector(".work-container")!
-        .getBoundingClientRect().left;
-      const rect = box[0].getBoundingClientRect();
-      const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-      let padding: number =
-        parseInt(window.getComputedStyle(box[0]).padding) / 2;
-      translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
-    }
-
-    setTranslateX();
-
-    let timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".work-section",
-        start: "top top",
-        end: `+=${translateX}`,
-        scrub: 1,
-        pin: true,
-        pinSpacing: true,
-        anticipatePin: 1,
-        id: "work",
-        invalidateOnRefresh: true,
-      },
+    // Fade in work items dynamically as they scroll into view
+    const items = gsap.utils.toArray(".work-item-2");
+    items.forEach((item: any) => {
+      gsap.fromTo(
+        item,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
     });
-
-    timeline.to(".work-flex", {
-      x: -translateX,
-      ease: "none",
-    });
-
-    // Refresh ScrollTrigger after layout settles
-    ScrollTrigger.refresh();
-
-    // Clean up
-    return () => {
-      timeline.kill();
-      ScrollTrigger.getById("work")?.kill();
-    };
   }, []);
+
   return (
     <div className="work-section" id="work">
       <div className="work-container section-container">
-        <h2>
-          My <span>Work</span>
-        </h2>
-        <div className="work-flex">
+        <div className="section-header">
+          <h2>
+            My <span>Work</span>
+          </h2>
+        </div>
+        
+        <div className="design-2-stack">
           {config.projects.slice(0, 5).map((project, index) => (
-            <div className="work-box" key={project.id}>
-              <div className="work-info">
-                <div className="work-title">
-                  <h3>0{index + 1}</h3>
-
-                  <div>
-                    <h4>{project.title}</h4>
-                    <p>{project.category}</p>
-                  </div>
+            <div className="work-item-2" key={project.id}>
+              <div className="content">
+                <span className="cat">{project.category}</span>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="tech-tags">
+                  {project.technologies.split(",").map((tech, idx) => (
+                    <span className="tech-tag" key={idx}>
+                      {tech.trim()}
+                    </span>
+                  ))}
                 </div>
-                <h4>Tools and features</h4>
-                <p>{project.technologies}</p>
               </div>
-              <WorkImage image={project.image} alt={project.title} />
+              <div className="visual">
+                <span className="big-num">0{index + 1}</span>
+                <WorkImage image={project.image} alt={project.title} />
+              </div>
             </div>
           ))}
-          {/* See All Works Button */}
-          <div className="work-box work-box-cta">
-            <div className="see-all-works">
-              <h3>Want to see more?</h3>
-              <p>Explore all of my projects and creations</p>
-              <Link to="/myworks" className="see-all-btn" data-cursor="disable">
-                See All Works →
-              </Link>
-            </div>
-          </div>
+        </div>
+
+        {/* See All Works Button */}
+        <div className="see-all-works-footer">
+          <h3>Want to see more?</h3>
+          <p>Explore all of my projects and creations</p>
+          <Link to="/myworks" className="see-all-btn" data-cursor="disable">
+            See All Works →
+          </Link>
         </div>
       </div>
     </div>

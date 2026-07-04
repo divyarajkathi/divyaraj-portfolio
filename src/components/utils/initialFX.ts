@@ -7,7 +7,10 @@ export function initialFX() {
   if (lenis) {
     lenis.start();
   }
-  document.getElementsByTagName("main")[0].classList.add("main-active");
+  const mainElement = document.getElementsByTagName("main")[0];
+  if (mainElement) {
+    mainElement.classList.add("main-active");
+  }
   gsap.to("body", {
     backgroundColor: "#0b080c",
     duration: 0.5,
@@ -15,6 +18,7 @@ export function initialFX() {
   });
 
   const selectors = [".landing-info h3", ".landing-intro h2", ".landing-intro h1"];
+
   const elements = selectors.flatMap(selector => Array.from(document.querySelectorAll(selector)));
   var landingText = new TextSplitter(elements, {
     type: "chars,lines",
@@ -30,7 +34,7 @@ export function initialFX() {
       ease: "power3.inOut",
       y: 0,
       stagger: 0.025,
-      delay: 0.3,
+      delay: 0,
     }
   );
 

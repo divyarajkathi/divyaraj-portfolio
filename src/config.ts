@@ -1,191 +1,102 @@
 export const config = {
     developer: {
-        name: "Redoyanul",
-        fullName: "Redoyanul Haque",
-        title: "AI & Full-Stack Developer",
-        description: "AI & Full-Stack Developer building intelligent systems and modern web applications. Passionate about machine learning, deep learning, and creating next-gen autonomous agents."
+        name: "Divyaraj",
+        fullName: "Divyaraj Varaniya",
+        title: "Full-Stack Developer",
+        description: "Full-Stack Developer building modern web applications and digital solutions. Passionate about WordPress, PHP, Laravel, and creating seamless user experiences for businesses and individuals."
     },
     social: {
-        github: "red1-for-hek",
-        email: "redoyanul1234@gmail.com",
-        location: "Bangladesh"
+        github: "divyarajkathi",
+        email: "divyarajkathi11@gmail.com",
+        location: "Ahmedabad, India"
     },
     about: {
         title: "About Me",
-        description: "I am a self-taught AI & Full-Stack Developer from Bangladesh. I build intelligent systems, chatbots, and modern web applications. My expertise includes Machine Learning, Deep Learning, NLP, and Full-Stack Web Development with React, Node.js, and Python. Currently building next-gen AI Agents and JARVIS-like Personal Assistants. I have a competitive programming mindset and a deep passion for automation. Code is poetry, AI is the canvas."
+        subtitle: "Building websites and web applications.",
+        description: "Hi, I'm Divyaraj. I enjoy building websites and web applications from start to finish, from designing the backend to creating responsive and user-friendly interfaces. I focus on writing clean code, solving real problems, and delivering solutions that are fast, secure, and easy to maintain. Every project helps me learn something new and become a better developer."
     },
     experiences: [
         {
-            position: "Learning Something New",
-            company: "Self-Development",
-            period: "2025 - Present",
-            location: "Bangladesh",
-            description: "Continuously exploring emerging technologies, researching advanced AI systems, and pushing the boundaries of what's possible in tech.",
+            position: "Project Intern",
+            company: "Lujayn Infoways",
+            period: "Apr 2025 - Aug 2025",
+            location: "Ahmedabad, Gujarat, India",
+            description: "Trained on real-world web development projects, learning industry practices and contributing to client work under senior developers.",
             responsibilities: [
-                "Researching cutting-edge AI and ML technologies",
-                "Experimenting with new frameworks and tools",
-                "Contributing to open-source projects",
-                "Building innovative personal projects"
+                "Assisted in developing and maintaining web projects",
+                "Learned WordPress and PHP development workflows",
+                "Participated in client project delivery",
+                "Built foundational full-stack development skills"
             ],
-            technologies: ["Research", "Innovation", "Open Source", "New Tech"]
+            technologies: ["WordPress", "PHP", "HTML", "CSS", "JavaScript"]
         },
         {
-            position: "AI Engineer",
-            company: "Freelance & Projects",
-            period: "2025",
-            location: "Bangladesh",
-            description: "Developing intelligent AI systems, chatbots, and machine learning solutions. Building next-gen conversational AI agents and JARVIS-like personal assistants.",
+            position: "Web Developer",
+            company: "Lujayn Infoways",
+            period: "Aug 2025 - Present",
+            location: "Ahmedabad, Gujarat, India",
+            description: "Working as a Web Developer, building and maintaining websites using WordPress and PHP. Developing and customizing WordPress websites, themes, and plugins for client projects.",
             responsibilities: [
-                "Building AI-powered chatbots and conversational agents",
-                "Developing machine learning models with TensorFlow and PyTorch",
-                "Working with LLMs and transformer architectures",
-                "Creating autonomous AI systems and automation tools"
+                "Develop and customize WordPress websites, themes, and plugins",
+                "Build and maintain websites using PHP and WordPress",
+                "Optimize websites for SEO and performance",
+                "Collaborate with clients to deliver tailored web solutions"
             ],
-            technologies: ["Python", "TensorFlow", "PyTorch", "LLMs", "NLP", "AI Agents"]
+            technologies: ["WordPress", "PHP", "SEO", "HTML", "CSS", "JavaScript"]
         },
         {
-            position: "Full-Stack Developer",
-            company: "Freelance & Projects",
-            period: "2024",
-            location: "Bangladesh",
-            description: "Built complete web applications from frontend to backend. Developed responsive UIs, RESTful APIs, and database solutions for various clients and projects.",
+            position: "Founder",
+            company: "Evonex",
+            period: "May 2025 - Present",
+            location: "Ahmedabad, Gujarat, India",
+            description: "Founded Evonex to provide end-to-end IT services — websites, web & mobile apps, custom software, games, and AI-powered solutions for businesses and individual clients.",
             responsibilities: [
-                "Developing full-stack web applications using React and Node.js",
-                "Building RESTful APIs and integrating databases",
-                "Creating responsive and interactive user interfaces",
-                "Deploying and maintaining web applications"
+                "Leading end-to-end IT service delivery for clients",
+                "Building websites, web apps, and mobile applications",
+                "Developing custom software and AI-powered solutions",
+                "Managing client relationships and project delivery"
             ],
-            technologies: ["React", "Node.js", "MongoDB", "Express", "Next.js", "TypeScript"]
+            technologies: ["WordPress", "PHP", "Laravel", "Node.js", "React", "AI Solutions"]
         },
-        {
-            position: "Python Developer",
-            company: "Self-Taught & Projects",
-            period: "2023",
-            location: "Bangladesh",
-            description: "Dove deep into Python programming, building automation scripts, bots, and mastering the fundamentals of software development and problem-solving.",
-            responsibilities: [
-                "Learning Python programming and core concepts",
-                "Building automation scripts and Discord bots",
-                "Exploring data structures and algorithms",
-                "Participating in competitive programming"
-            ],
-            technologies: ["Python", "Automation", "Scripting", "Discord.py", "Problem Solving"]
-        },
-        {
-            position: "Graphic Designer",
-            company: "Freelance",
-            period: "2022",
-            location: "Bangladesh",
-            description: "Started my creative journey as a graphic designer, creating logos, banners, and visual content. This sparked my passion for technology and digital creation.",
-            responsibilities: [
-                "Designing logos and brand identity materials",
-                "Creating social media graphics and banners",
-                "Working with clients on creative projects",
-                "Learning design principles and visual aesthetics"
-            ],
-            technologies: ["Photoshop", "Illustrator", "Canva", "Figma", "Visual Design"]
-        },
-        {
-            position: "Microsoft Office",
-            company: "Begin Learning",
-            period: "2021",
-            location: "Bangladesh",
-            description: "Started my journey into the digital world by learning Microsoft Office tools. This foundational step introduced me to computers and sparked my curiosity for technology.",
-            responsibilities: [
-                "Learning Microsoft Word, Excel, and PowerPoint",
-                "Creating documents and presentations",
-                "Understanding basic computer operations",
-                "Building foundational digital skills"
-            ],
-            technologies: ["MS Word", "MS Excel", "MS PowerPoint", "Computer Basics"]
-        }
     ],
     projects: [
         {
             id: 1,
-            title: "Drishti",
-            category: "AI / LLM",
-            technologies: "Python, PyTorch, Transformers, FastAPI, React, MongoDB",
-            image: "/images/drishti.png",
-            description: "Bangladesh's first intelligent advanced AI chatbot powered by a custom Large Language Model. Features natural language understanding, contextual conversations, and multilingual support including Bengali."
+            title: "EDU SMALL FINANCE BANK",
+            category: "website - College Project",
+            technologies: "HTML, CSS, JS, Laravel, Bootstrap",
+            image: "/images/edubank.png",
+            description: "A simple bank management system built to handle core banking operations like accounts, transfers, deposits, and user profiles."
         },
         {
             id: 2,
-            title: "VoteChain",
-            category: "Blockchain",
-            technologies: "Solidity, Web3.js, React, Ethereum, IPFS, MetaMask, Node.js",
-            image: "/images/votechain.png",
-            description: "A decentralized election system built on blockchain technology ensuring transparent, tamper-proof, and verifiable voting. Features smart contracts for vote integrity and real-time result tracking."
-        },
-        {
-            id: 3,
-            title: "EIE - Earthquake Impact Estimator",
-            category: "IoT / Hardware",
-            technologies: "Arduino, C++, IoT Sensors, Python, ML, React",
-            image: "/images/eie.png",
-            description: "A practical circuit-based IoT system utilizing Arduino to predict earthquakes before they strike. Integrates hardware sensors for real-time seismic detection and impact estimation."
-        },
-        {
-            id: 4,
-            title: "GameKroy",
-            category: "Full Stack",
-            technologies: "React, Node.js, MongoDB, Express, Stripe, TailwindCSS",
-            image: "/images/gamekroy.png",
-            description: "A full-featured e-commerce platform for gaming products. Includes user authentication, product catalog, shopping cart, secure payments, order tracking, and admin dashboard."
-        },
-        {
-            id: 5,
-            title: "RedxChess",
-            category: "AI / Game Engine",
-            technologies: "Python, C++, Neural Networks, Bitboards, UCI Protocol",
-            image: "/images/redxchess.png",
-            description: "A high-performance chess engine rated 3640 ELO. Features advanced search algorithms, neural network evaluation, and optimized bitboard representation for lightning-fast move generation."
-        },
-        {
-            id: 6,
-            title: "Floodhub",
-            category: "AI / ML",
-            technologies: "Python, TensorFlow, Pandas, React, FastAPI, GIS",
-            image: "/images/floodhub.png",
-            description: "A flood prediction model specifically designed for Bangladesh's river systems. Analyzes weather patterns, water levels, and historical data to provide accurate flood forecasts and alerts."
-        },
-        {
-            id: 7,
-            title: "Phoenix",
-            category: "AI Assistant",
-            technologies: "Python, Speech Recognition, PyAutoGUI, OpenAI API, Tkinter",
-            image: "/images/phoenix.png",
-            description: "A JARVIS-inspired personal AI desktop assistant. Controls system functions, manages tasks, answers queries, automates workflows, and provides voice-activated computing experience."
-        },
-        {
-            id: 8,
-            title: "HekTools",
-            category: "Security / Android",
-            technologies: "Kotlin, Android SDK, Firebase, Python, Encryption",
-            image: "/images/hektools.png",
-            description: "An advanced Android monitoring and security research tool. Features remote device management, activity logging, and encrypted data transmission for security testing purposes."
+            title: "Evonex",
+            category: "Business Website / IT Agency",
+            technologies: "PHP , HTML, CSS , BOOTSTRAP",
+            image: "/images/evonex.png",
+            description: "A modern business portfolio website for Evonex, an agency delivering custom IT services including web development, mobile applications, and AI-powered automation solutions. Features a clean service catalog and a seamless client inquiry portal."
         }
     ],
     contact: {
-        email: "redoyanul1234@gmail.com",
-        github: "https://github.com/red1-for-hek",
-        linkedin: "https://linkedin.com/in/red1-for-hek",
-        twitter: "https://x.com/red_1_ul",
-        facebook: "https://www.facebook.com/redoyanulhaque.hacker.official",
-        instagram: "https://www.instagram.com/red_1_ul"
+        email: "divyarajkathi11@gmail.com",
+        github: "https://github.com/divyarajkathi",
+        linkedin: "https://www.linkedin.com/in/varaniya-divyaraj",
+        twitter: "",
+        facebook: "",
+        instagram: "https://www.instagram.com/divyaraj_kathi_111"
     },
     skills: {
         develop: {
-            title: "AI DEVELOPER",
-            description: "Building intelligent systems & AI solutions",
-            details: "Developing AI agents, chatbots, and machine learning models using Python, TensorFlow, and PyTorch. Specializing in LLMs, NLP, deep learning, and autonomous systems.",
-            tools: ["Python", "TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "LLMs", "NLP", "Deep Learning", "Chatbots", "AI Agents"]
+            title: "BACKEND",
+            description: "Building modern websites & web applications",
+            details: "I develop secure and scalable backend systems for web applications using Laravel, PHP, Node.js, and WordPress. I work on APIs, database handling, and custom features that power full web applications. My focus is on building reliable systems that are easy to maintain and perform well.",
+            tools: ["PHP", "Laravel", "Node.js", "WordPress", "REST APIs"]
         },
         design: {
-            title: "FULL-STACK",
-            description: "Modern web development & scalable applications",
-            details: "Building responsive and performant web applications using React, Next.js, Node.js, and databases. Creating seamless user experiences with modern UI/UX principles.",
-            tools: ["React", "Next.js", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "TailwindCSS", "REST APIs", "Docker", "Git"]
+            title: "FRONTEND",
+            description: "Modern & responsive UI development",
+            details: "I build clean, responsive, and interactive user interfaces using HTML, CSS, and JavaScript. I focus on creating smooth user experiences that work well on all devices. I enjoy turning designs into real, functional websites that are simple and easy to use.",
+            tools: ["HTML", "CSS", "JavaScript", "Bootstrap"]
         }
     }
 };

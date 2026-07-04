@@ -1,99 +1,38 @@
-# 🚀 3D Developer Portfolio Website (React + TypeScript + Three.js)
+# 🚀 Divyaraj Varaniya | 3D Full-Stack Developer Portfolio
 
-[![3D portfolio preview (click to watch video)](./Screenshot_2026-04-08_22-10-00.png)](./screen-capture%20(13).webm)
-
-A modern, high-performance **3D developer portfolio website** built with **React**, **TypeScript**, **Three.js**, **GSAP**, and **WebGL**.
-
-If you’re a developer looking for a **portfolio template** that feels premium, interactive, and memorable—this repo is for you.
-
-> Live preview: https://www.redoyanulhaque.me/
+A premium, highly interactive, and responsive **3D developer portfolio website** custom-built for **Divyaraj Varaniya** using **React**, **TypeScript**, **Three.js / WebGL**, **GSAP**, and **Vite**.
 
 ---
 
-## ✨ Highlights
+## ✨ Features & Visual Highlights
 
-- **3D / WebGL experience** powered by **Three.js**
-- Smooth animations with **GSAP**
-- Modern **React + TypeScript** codebase
-- Fast, responsive UI (desktop + mobile)
-- Designed for developers, engineers, programmers, and creators
+- **Interactive 3D Character Experience**: Fully rigged 3D developer avatar wearing custom neon-spectacles, sitting at a desk and tracking mouse movements (on desktop) or swipe-touches (on mobile/tablets) in real time.
+- **Fluid Liquid-Text Loading Screen**: A futuristic custom loading screen featuring a vertical "liquid water fill" percentage sweep on the word `"WELCOME"` (loads in under 1 second) and transitions via a cinematic scale-up zoom exit and motion blur.
+- **Synchronized Entrance Timelines**: Perfectly coordinated entrance transitions—the moment the loader zooms away, the homepage text split animation (GSAP letters fade-in stagger) and the 3D character lights activate simultaneously at the exact same millisecond.
+- **Fully Responsive (Cross-Screen optimization)**: Customized relative viewport positioning and aspect-ratio based dynamic camera zoom factors that ensure the 3D character renders beautifully on all devices (TVs, laptops, iPads, and iPhones).
+- **Modern Dev Tech Stack Pyramid**: Structured inverted pyramid displaying experience across WordPress, PHP, Laravel, Node.js, HTML, CSS, JavaScript, MySQL, and Bootstrap.
 
 ---
 
 ## 🧰 Tech Stack
 
-- **React**
-- **TypeScript**
-- **Three.js / WebGL**
-- **GSAP**
-- **HTML / CSS / JavaScript**
+- **Framework**: React (Vite)
+- **Language**: TypeScript
+- **3D Graphics**: Three.js & WebGL (GLTFLoader with Draco compression)
+- **Animations**: GSAP (ScrollTrigger & staggered letter-splits)
+- **Styling**: Vanilla CSS (Premium dark mode aesthetic, glassmorphism UI)
+- **Analytics**: Vercel Analytics & Speed Insights
 
----
 
-## 🚀 Getting Started
-
-### 1) Clone
-
-```bash
-git clone https://github.com/red1-for-hek/portfolio-website.git
-cd portfolio-website
-```
-
-### 2) Install
-
-```bash
-npm install
-```
-
-### 3) Run locally
-
-```bash
-npm run dev
-```
-
-### 4) Build
-
-```bash
-npm run build
-```
-
----
-
-## 🧩 Customize (Quick Guide)
-
-Typical things you’ll want to update:
-
-- **Your name + hero section text**
-- **Projects list**
-- **Social links** (GitHub, LinkedIn, email)
-- **SEO meta title/description**
-
----
-
-## ⭐ Support
-
-If you found this useful:
-
-- Please **star** the repository (it helps a lot)
-- Share it with a friend who needs a portfolio template
-- Sponsor via the **Sponsor** button on GitHub (if available in your region)
-
----
 
 ## 🤝 Connect
 
-- LinkedIn: https://www.linkedin.com/in/red1-for-hek/
-
----
-
-## 🏷️ Recommended GitHub Topics (add in repo settings)
-
-Add these topics to improve GitHub search visibility:
-
-`portfolio` `developer-portfolio` `portfolio-website` `portfolio-template` `3d-portfolio` `react` `typescript` `threejs` `webgl` `gsap` `frontend` `vite`
+- **LinkedIn**: [varaniya-divyaraj](https://www.linkedin.com/in/varaniya-divyaraj)
+- **GitHub**: [divyarajkathi](https://github.com/divyarajkathi)
+- **Email**: [divyarajkathi11@gmail.com](mailto:divyarajkathi11@gmail.com)
 
 ---
 
 ## 🪪 License
 
-This project is open source and available under the **MIT License**. See [LICENSE](LICENSE).
+This project is open-source and licensed under the **MIT License**.
