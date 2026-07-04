@@ -102,7 +102,7 @@
     display: block;
     width: auto;
     margin: 0 !important;
-    font-size: 24px !important;
+    font-size: 20px !important;
     line-height: 1.3 !important;
     white-space: normal;
     text-align: center;
@@ -363,8 +363,8 @@
   margin: 0;
   font-family: "Geist", sans-serif;
   font-weight: 900;
-  font-size: 28px;
-  line-height: 1.1;
+  font-size: 22px;
+  line-height: 1.2;
   letter-spacing: 2px;
   text-transform: uppercase;
   background: linear-gradient(to right, #ffffff, #a855f7);
@@ -395,8 +395,8 @@
   }
 
   .landing-info h2 {
-    font-size: 35px;
-    line-height: 40px;
+    font-size: 26px;
+    line-height: 30px;
   }
 }
 
@@ -419,8 +419,8 @@
   }
 
   .landing-info h2 {
-    font-size: 45px;
-    line-height: 42px;
+    font-size: 34px;
+    line-height: 38px;
   }
 }
 
@@ -489,7 +489,7 @@
   }
 
   .landing-info h2 {
-    font-size: 65px;
-    line-height: 62px;
+    font-size: 50px;
+    line-height: 52px;
   }
 }

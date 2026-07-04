@@ -2,8 +2,8 @@ export const config = {
     developer: {
         name: "Divyaraj",
         fullName: "Divyaraj Varaniya",
-        title: "Full-Stack Developer",
-        description: "Full-Stack Developer building modern web applications and digital solutions. Passionate about WordPress, PHP, Laravel, and creating seamless user experiences for businesses and individuals."
+        title: "Web Developer & Chatbot Specialist",
+        description: "Web Developer & Chatbot Specialist building modern websites, web applications, and conversational AI chatbots. Passionate about WordPress, PHP, Laravel, Python, Node.js, and custom WhatsApp chatbot automation."
     },
     social: {
         github: "divyarajkathi",
@@ -12,8 +12,8 @@ export const config = {
     },
     about: {
         title: "About Me",
-        subtitle: "Building websites and web applications.",
-        description: "Hi, I'm Divyaraj. I enjoy building websites and web applications from start to finish, from designing the backend to creating responsive and user-friendly interfaces. I focus on writing clean code, solving real problems, and delivering solutions that are fast, secure, and easy to maintain. Every project helps me learn something new and become a better developer."
+        subtitle: "Building websites and chatbots.",
+        description: "Hi, I'm Divyaraj. I enjoy building websites and conversational chatbots from start to finish. I focus on designing full-stack web applications and engineering automated chat helpers using PHP, Python, and Node.js. My goal is to deliver clean, fast, and secure digital solutions that streamline user interaction. Every project is an opportunity to learn and grow my development expertise."
     },
     experiences: [
         {
@@ -87,16 +87,16 @@ export const config = {
     },
     skills: {
         develop: {
-            title: "BACKEND",
-            description: "Building modern websites & web applications",
-            details: "I develop secure and scalable backend systems for web applications using Laravel, PHP, Node.js, and WordPress. I work on APIs, database handling, and custom features that power full web applications. My focus is on building reliable systems that are easy to maintain and perform well.",
-            tools: ["PHP", "Laravel", "Node.js", "WordPress", "REST APIs"]
+            title: "CHATBOT SPECIALIST",
+            description: "Custom AI & WhatsApp Bot Automation",
+            details: "I specialize in building and deploying custom conversational chatbots and automation scripts. I develop smart AI assistants, WhatsApp bots, and direct chat integrations using PHP, Python, and Node.js to enhance customer interactions and solve automation needs.",
+            tools: ["Python", "Node.js", "PHP"]
         },
         design: {
-            title: "FRONTEND",
-            description: "Modern & responsive UI development",
-            details: "I build clean, responsive, and interactive user interfaces using HTML, CSS, and JavaScript. I focus on creating smooth user experiences that work well on all devices. I enjoy turning designs into real, functional websites that are simple and easy to use.",
-            tools: ["HTML", "CSS", "JavaScript", "Bootstrap"]
+            title: "WEB DEVELOPMENT",
+            description: "Full-Stack Web Design & Development",
+            details: "I build complete, responsive, and secure websites and web applications from frontend interfaces to backend servers. I focus on custom logic, database layouts, and fast loading speeds using Laravel, WordPress, PHP, and modern Javascript.",
+            tools: ["WordPress", "PHP", "Laravel", "Node.js", "HTML", "CSS", "JavaScript", "MySQL", "Bootstrap"]
         }
     }
 };
