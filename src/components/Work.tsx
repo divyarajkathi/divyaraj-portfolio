@@ -29,6 +29,109 @@ const Work = () => {
         }
       );
     });
+
+    // 🌟 Interactive 3D Card Hover & Touch Tilt Effect
+    const cards = document.querySelectorAll(".work-item-2 .visual");
+    cards.forEach((elem) => {
+      const card = elem as HTMLElement;
+
+      const handleMouseMove = (e: MouseEvent) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        // Calculate tilt angles based on cursor offset from card center
+        const rotateX = ((y - centerY) / centerY) * -8; // Tilt up/down (max 8 degrees)
+        const rotateY = ((x - centerX) / centerX) * 8;  // Tilt left/right (max 8 degrees)
+
+        gsap.to(card, {
+          rotateX: rotateX,
+          rotateY: rotateY,
+          scale: 1.02,
+          transformPerspective: 1000,
+          boxShadow: "0 25px 50px -12px rgba(168, 85, 247, 0.25)",
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      };
+
+      const handleMouseLeave = () => {
+        // Reset card properties back to normal
+        gsap.to(card, {
+          rotateX: 0,
+          rotateY: 0,
+          scale: 1,
+          boxShadow: "0 0px 0px rgba(0, 0, 0, 0)",
+          duration: 0.5,
+          ease: "power3.out",
+        });
+      };
+
+      const handleTouchMove = (e: TouchEvent) => {
+        if (e.touches && e.touches[0]) {
+          const rect = card.getBoundingClientRect();
+          const x = e.touches[0].clientX - rect.left;
+          const y = e.touches[0].clientY - rect.top;
+
+          // Check if touch is within the card area
+          if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -8;
+            const rotateY = ((x - centerX) / centerX) * 8;
+
+            gsap.to(card, {
+              rotateX: rotateX,
+              rotateY: rotateY,
+              scale: 1.02,
+              transformPerspective: 1000,
+              boxShadow: "0 25px 50px -12px rgba(168, 85, 247, 0.25)",
+              duration: 0.3,
+              ease: "power2.out",
+            });
+          }
+        }
+      };
+
+      const handleTouchEnd = () => {
+        gsap.to(card, {
+          rotateX: 0,
+          rotateY: 0,
+          scale: 1,
+          boxShadow: "0 0px 0px rgba(0, 0, 0, 0)",
+          duration: 0.5,
+          ease: "power3.out",
+        });
+      };
+
+      card.addEventListener("mousemove", handleMouseMove);
+      card.addEventListener("mouseleave", handleMouseLeave);
+      card.addEventListener("touchmove", handleTouchMove, { passive: true });
+      card.addEventListener("touchend", handleTouchEnd, { passive: true });
+      card.addEventListener("touchstart", (e: TouchEvent) => {
+        if (e.touches && e.touches[0]) {
+          handleTouchMove(e);
+        }
+      }, { passive: true });
+
+      // Store cleanup function
+      (card as any)._cleanup3D = () => {
+        card.removeEventListener("mousemove", handleMouseMove);
+        card.removeEventListener("mouseleave", handleMouseLeave);
+        card.removeEventListener("touchmove", handleTouchMove);
+        card.removeEventListener("touchend", handleTouchEnd);
+      };
+    });
+
+    return () => {
+      cards.forEach((card) => {
+        if ((card as any)._cleanup3D) {
+          (card as any)._cleanup3D();
+        }
+      });
+    };
   }, []);
 
   return (
@@ -39,7 +142,7 @@ const Work = () => {
             My <span>Work</span>
           </h2>
         </div>
-        
+
         <div className="design-2-stack">
           {config.projects.slice(0, 5).map((project, index) => (
             <div className="work-item-2" key={project.id}>
