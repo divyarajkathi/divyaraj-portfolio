@@ -26,7 +26,13 @@ const MyWorks = () => {
               <h3>{project.title}</h3>
               <p className="myworks-card-category">{project.category}</p>
               <p className="myworks-card-description">{project.description}</p>
-              <p className="myworks-card-tech">{project.technologies}</p>
+              <div className="tech-tags">
+                {project.technologies.split(",").map((tech, idx) => (
+                  <span className="tech-tag" key={idx}>
+                    {tech.trim()}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}

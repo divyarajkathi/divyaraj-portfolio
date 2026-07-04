@@ -180,6 +180,7 @@
 .see-all-btn:hover {
   transform: scale(1.03);
   box-shadow: 0 10px 30px rgba(168, 85, 247, 0.35);
+  color: #000000 !important;
 }
 
 /* Video hover visual overrides */
