@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { FaCommentDots, FaPaperPlane, FaTimes} from "react-icons/fa";
+import { FaCommentDots, FaPaperPlane, FaTimes } from "react-icons/fa";
 import "./styles/ChatBot.css";
 
 interface Message {
