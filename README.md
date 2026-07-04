@@ -8,7 +8,7 @@ A premium, highly interactive, and responsive **3D developer portfolio website**
 
 - **Interactive 3D Character Experience**: Fully rigged 3D developer avatar wearing custom neon-spectacles, sitting at a desk and tracking mouse movements (on desktop) or swipe-touches (on mobile/tablets) in real time.
 - **Fluid Liquid-Text Loading Screen**: A futuristic custom loading screen featuring a vertical "liquid water fill" percentage sweep on the word `"WELCOME"` (loads in under 1 second) and transitions via a cinematic scale-up zoom exit and motion blur.
-- **Synchronized Entrance Timelines**: Perfectly coordinated entrance transitions—the moment the loader zooms away, the homepage text split animation (GSAP letters fade-in stagger) and the 3D character lights activate simultaneously at the exact same millisecond.
+- **Synchronized Entrance Timelines**: Perfectly coordinated entrance transitions - the moment the loader zooms away, the homepage text split animation (GSAP letters fade-in stagger) and the 3D character lights activate simultaneously at the exact same millisecond.
 - **Fully Responsive (Cross-Screen optimization)**: Customized relative viewport positioning and aspect-ratio based dynamic camera zoom factors that ensure the 3D character renders beautifully on all devices (TVs, laptops, iPads, and iPhones).
 - **Modern Dev Tech Stack Pyramid**: Structured inverted pyramid displaying experience across WordPress, PHP, Laravel, Node.js, HTML, CSS, JavaScript, MySQL, and Bootstrap.
 

@@ -49,7 +49,7 @@ export const config = {
             company: "Evonex",
             period: "May 2025 - Present",
             location: "Ahmedabad, Gujarat, India",
-            description: "Founded Evonex to provide end-to-end IT services — websites, web & mobile apps, custom software, games, and AI-powered solutions for businesses and individual clients.",
+            description: "Founded Evonex to provide end-to-end IT services - websites, web & mobile apps, custom software, games, and AI-powered solutions for businesses and individual clients.",
             responsibilities: [
                 "Leading end-to-end IT service delivery for clients",
                 "Building websites, web apps, and mobile applications",
