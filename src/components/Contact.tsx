@@ -1,5 +1,5 @@
 import { MdCopyright } from "react-icons/md";
-import { FaLinkedinIn, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa6";
+import { FaLinkedinIn, FaEnvelope } from "react-icons/fa6";
 import "./styles/Contact.css";
 import { config } from "../config";
 import gsap from "gsap";
