@@ -63,8 +63,6 @@ const ChatBot = () => {
 
   const suggestions = [
     "Tell me about yourself! 🚀",
-    "What's your tech stack? 💻",
-    "What is Evonex? 🏢",
     "Talk on WhatsApp 💬",
   ];
 
