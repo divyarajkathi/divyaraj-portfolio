@@ -139,7 +139,7 @@ const ChatBot = () => {
       - Location: Ahmedabad, India
       - Education:
         * Schooling: Class 1 to 12 at Cambridge Academy, Junagadh
-        * College: BCA (Bachelor of Computer Applications) at SSDIIT, Junagadh (affiliated with BKNMU University, Junagadh)
+        * College: BCA (Bachelor of Computer Applications) at SSSDIIT, Junagadh (affiliated with BKNMU University, Junagadh)
       - Email: divyarajkathi11@gmail.com
       - GitHub: https://github.com/divyarajkathi
       - LinkedIn: https://www.linkedin.com/in/varaniya-divyaraj
