@@ -65,8 +65,6 @@ const Contact = () => {
         </div>
 
         <div className="bottom-bar">
-          <span>{config.social.location}</span>
-          <span>Designed & Developed by {config.developer.fullName}</span>
           <span>
             <MdCopyright /> {new Date().getFullYear()} All Rights Reserved
           </span>
