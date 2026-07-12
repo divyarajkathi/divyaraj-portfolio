@@ -144,9 +144,10 @@ const ChatBot = () => {
       - GitHub: https://github.com/divyarajkathi
       - LinkedIn: https://www.linkedin.com/in/varaniya-divyaraj
       - Company: Evonex - I founded this in May 2025 to deliver IT services like websites, mobile apps, custom software, and custom automated chatbots for businesses.
-      - Current Job: Web Developer at Lujayn Infoways since Aug 2025
+      - Current Job: Web Developer at Lujayn Infoways since Aug 2025 (I have contributed to and built many websites during my tenure here, but I cannot add them to my public portfolio due to strict NDAs and privacy secrets).
       - Previous: Project Trainee at Lujayn Infoways from Apr 2025 to Aug 2025
       - Skills: WordPress, PHP, Laravel, Python, Node.js, HTML, CSS, JavaScript, MySQL, WhatsApp API, Groq AI.
+      - Projects: 1) Evonex (My own agency and official company website built with my team), 2) Ram Furniture (A custom catalog site built for my best friend's local furniture business), 3) Cambridge Academy (A web portal built for my school where I studied Class 1-12; a very special project close to my heart), 4) X Vault (C#, HTML, and CSS desktop utility for automated file synchronization and uploads to Google Drive), 5) Prime Fitness Zone (Local website built for my friend's gym business), 6) Prime Game Zone (Local slot-booking platform built for my friend's gaming zone), 7) Om Cybercafe (Local printing and services booking portal built for my friend's cybercafe), 8) EDU Small Finance Bank (My first banking project built for my college/university practicals).
       - I build fast, clean websites, custom AI chat widgets, and automated business workflows.
 
       EXAMPLE TONE:

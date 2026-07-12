@@ -35,7 +35,7 @@ export const config = {
             company: "Lujayn Infoways",
             period: "Aug 2025 - Present",
             location: "Ahmedabad, Gujarat, India",
-            description: "Working as a Web Developer, building and maintaining websites using WordPress and PHP. Developing and customizing WordPress websites, themes, and plugins for client projects.",
+            description: "Working as a Web Developer, building and maintaining websites using WordPress and PHP. Contributed to numerous production sites and client systems (NDA/proprietary projects not listed in portfolio due to privacy).",
             responsibilities: [
                 "Develop and customize WordPress websites, themes, and plugins",
                 "Build and maintain websites using PHP and WordPress",
@@ -62,19 +62,67 @@ export const config = {
     projects: [
         {
             id: 1,
-            title: "EDU SMALL FINANCE BANK",
-            category: "website - College Project",
-            technologies: "HTML, CSS, JS, Laravel, Bootstrap",
-            image: "/images/edubank.png",
-            description: "A simple bank management system built to handle core banking operations like accounts, transfers, deposits, and user profiles."
+            title: "Evonex",
+            category: "Business Website / IT Agency",
+            technologies: "PHP, HTML, CSS, BOOTSTRAP",
+            image: "/images/evonex.png",
+            description: "This is my own IT services agency and my official company website, designed and built with my team to showcase our capabilities and handle client inquiries."
         },
         {
             id: 2,
-            title: "Evonex",
-            category: "Business Website / IT Agency",
-            technologies: "PHP , HTML, CSS , BOOTSTRAP",
-            image: "/images/evonex.png",
-            description: "A modern business portfolio website for Evonex, an agency delivering custom IT services including web development, mobile applications, and AI-powered automation solutions. Features a clean service catalog and a seamless client inquiry portal."
+            title: "Ram Furniture",
+            category: "Local Business Catalog / Showroom",
+            technologies: "WordPress, PHP, HTML, CSS, JS",
+            image: "/images/Ram-Furniture.png",
+            description: "A local custom furniture catalog website built for my best friend's business, which I secured through a personal reference to display custom-built home interior woodwork."
+        },
+        {
+            id: 3,
+            title: "Cambridge Academy",
+            category: "Web Portal / Academic Platform",
+            technologies: "WordPress, PHP, HTML, CSS, JS",
+            image: "/images/Cambridge-Academy.png",
+            description: "The official school portal where I studied from Class 1 to 12. I approached the trustees to design and build this special project, adding a strong personal and emotional connection."
+        },
+        {
+            id: 4,
+            title: "X Vault",
+            category: "Cloud Storage Utility / Automation Tool",
+            technologies: "C#, HTML, CSS",
+            image: "/images/X-valut.jpeg",
+            description: "An automated local vault application that automatically syncs and directly uploads images and files to Google Drive for secure, instant backup."
+        },
+        {
+            id: 5,
+            title: "Prime Fitness Zone",
+            category: "Local Business / Gym Management",
+            technologies: "WordPress, HTML, CSS, JS, PHP",
+            image: "/images/Prime-Fitness-Zone.png",
+            description: "A local website built for my friend's gym business. I approached him to design a clean member and workout tracking portal."
+        },
+        {
+            id: 6,
+            title: "Prime Game Zone",
+            category: "Local Business / Gaming Platform",
+            technologies: "HTML, CSS, JavaScript, PHP",
+            image: "/images/Prime-Game-Zone.png",
+            description: "A local slot-booking website built for my friend's gaming zone business."
+        },
+        {
+            id: 7,
+            title: "Om Cybercafe",
+            category: "Local Business / Digital Services",
+            technologies: "HTML, CSS, JavaScript, PHP",
+            image: "/images/Om-Cybercafe.png",
+            description: "A local digital services and printing booking portal built for my friend's cybercafe business."
+        },
+        {
+            id: 8,
+            title: "EDU SMALL FINANCE BANK",
+            category: "Academic Project / Banking System",
+            technologies: "HTML, CSS, JS, Laravel, Bootstrap",
+            image: "/images/edubank.png",
+            description: "My very first local project, built as a banking management system for my college and university practicals."
         }
     ],
     contact: {
