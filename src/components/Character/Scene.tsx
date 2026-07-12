@@ -118,8 +118,21 @@ const Scene = () => {
         landingDiv.addEventListener("touchstart", onTouchStart);
         landingDiv.addEventListener("touchend", onTouchEnd);
       }
+      let isInViewport = true;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          isInViewport = entry.isIntersecting;
+        },
+        { threshold: 0.05 }
+      );
+      if (canvasDiv.current) {
+        observer.observe(canvasDiv.current);
+      }
+
       const animate = () => {
         requestAnimationFrame(animate);
+        if (!isInViewport) return;
+        
         if (headBone) {
           handleHeadRotation(
             headBone,
@@ -140,6 +153,7 @@ const Scene = () => {
       animate();
       return () => {
         clearTimeout(debounce);
+        observer.disconnect();
         scene.clear();
         renderer.dispose();
         window.removeEventListener("resize", () =>
