@@ -65,7 +65,7 @@ export const config = {
             title: "Evonex",
             category: "Business Website / IT Agency",
             technologies: "PHP, HTML, CSS, BOOTSTRAP",
-            image: "/images/evonex.png",
+            image: "/images/evonex.webp",
             description: "This is my own IT services agency and my official company website, designed and built with my team to showcase our capabilities and handle client inquiries."
         },
         {
@@ -73,7 +73,7 @@ export const config = {
             title: "Ram Furniture",
             category: "Local Business Catalog / Showroom",
             technologies: "WordPress, PHP, HTML, CSS, JS",
-            image: "/images/Ram-Furniture.png",
+            image: "/images/Ram-Furniture.webp",
             description: "A local custom furniture catalog website built for my best friend's business, which I secured through a personal reference to display custom-built home interior woodwork."
         },
         {
@@ -81,7 +81,7 @@ export const config = {
             title: "Cambridge Academy",
             category: "Web Portal / Academic Platform",
             technologies: "WordPress, PHP, HTML, CSS, JS",
-            image: "/images/Cambridge-Academy.png",
+            image: "/images/Cambridge-Academy.webp",
             description: "The official school portal where I studied from Class 1 to 12. I approached the trustees to design and build this special project, adding a strong personal and emotional connection."
         },
         {
@@ -89,7 +89,7 @@ export const config = {
             title: "X Vault",
             category: "Cloud Storage Utility / Automation Tool",
             technologies: "C#, HTML, CSS",
-            image: "/images/X-valut.jpeg",
+            image: "/images/X-valut.webp",
             description: "An automated local vault application that automatically syncs and directly uploads images and files to Google Drive for secure, instant backup."
         },
         {
@@ -97,7 +97,7 @@ export const config = {
             title: "Prime Fitness Zone",
             category: "Local Business / Gym Management",
             technologies: "WordPress, HTML, CSS, JS, PHP",
-            image: "/images/Prime-Fitness-Zone.png",
+            image: "/images/Prime-Fitness-Zone.webp",
             description: "A local website built for my friend's gym business. I approached him to design a clean member and workout tracking portal."
         },
         {
@@ -105,7 +105,7 @@ export const config = {
             title: "Prime Game Zone",
             category: "Local Business / Gaming Platform",
             technologies: "HTML, CSS, JavaScript, PHP",
-            image: "/images/Prime-Game-Zone.png",
+            image: "/images/Prime-Game-Zone.webp",
             description: "A local slot-booking website built for my friend's gaming zone business."
         },
         {
@@ -113,7 +113,7 @@ export const config = {
             title: "Om Cybercafe",
             category: "Local Business / Digital Services",
             technologies: "HTML, CSS, JavaScript, PHP",
-            image: "/images/Om-Cybercafe.png",
+            image: "/images/Om-Cybercafe.webp",
             description: "A local digital services and printing booking portal built for my friend's cybercafe business."
         },
         {
@@ -121,7 +121,7 @@ export const config = {
             title: "EDU SMALL FINANCE BANK",
             category: "Academic Project / Banking System",
             technologies: "HTML, CSS, JS, Laravel, Bootstrap",
-            image: "/images/edubank.png",
+            image: "/images/edubank.webp",
             description: "My very first local project, built as a banking management system for my college and university practicals."
         }
     ],

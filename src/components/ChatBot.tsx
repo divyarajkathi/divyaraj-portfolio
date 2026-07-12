@@ -233,7 +233,7 @@ const ChatBot = () => {
           <div className="chatbot-header">
             <div className="chatbot-header-info">
               <div className="chatbot-avatar">
-                <img src="/images/divyaraj_linkdlin_profile_photo.png" alt="Divyaraj Varaniya" />
+                <img src="/images/divyaraj_linkdlin_profile_photo.webp" alt="Divyaraj Varaniya" />
               </div>
               <div className="chatbot-title">
                 <h3>Divyaraj's AI</h3>
