@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import "./styles/TechStackNew.css";
 
 interface TechItem {
@@ -30,22 +31,45 @@ const techStack: TechItem[][] = [
 ];
 
 const TechStackNew = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Unsubscribe once visible
+        }
+      },
+      { rootMargin: "200px" } // Preload 200px before scrolling into view
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="techstack-new">
-      {/* Video Background */}
-      <div className="techstack-video-container">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="techstack-video"
-        >
-          <source src="/video/video.webm" type="video/webm" />
-        </video>
-        {/* Dark Overlay */}
-        <div className="techstack-overlay"></div>
-      </div>
+    <div className="techstack-new" ref={sectionRef}>
+      {/* Video Background - Loaded dynamically on scroll */}
+      {isVisible && (
+        <div className="techstack-video-container">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="techstack-video"
+          >
+            <source src="/video/video.webm" type="video/webm" />
+          </video>
+          {/* Dark Overlay */}
+          <div className="techstack-overlay"></div>
+        </div>
+      )}
 
       {/* Content */}
       <div className="techstack-content">
